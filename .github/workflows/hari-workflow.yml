@@ -34,3 +34,7 @@ jobs:
         run: |
           echo Hari Add other actions to build,
           echo Hari test, and deploy your project.
+          
+      # Runs another command on shell
+      - name : Run the list command 
+        run: ls -altr
