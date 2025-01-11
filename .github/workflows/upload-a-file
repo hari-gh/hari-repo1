@@ -1,0 +1,21 @@
+name: Upload File
+
+on: [push]
+  workflow_dispatch:
+
+jobs:
+  upload-file:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Create a file
+      run: echo "This is a sample file" > sample.txt
+
+    - name: Upload file
+      uses: actions/upload-artifact@v3
+      with:
+        name: sample-file
+        path: sample.txt
