@@ -38,3 +38,7 @@ jobs:
       # Runs another command on shell
       - name : Run the list command 
         run: ls -altr
+      - name : check the current branch name
+        run: |
+          git status
+          git branch
