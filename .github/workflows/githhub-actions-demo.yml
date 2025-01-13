@@ -1,0 +1,33 @@
+name: GitHub Actions Example
+on: 
+  push:
+    branches: [ "hari" ]
+  workflow_dispatch:
+
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - name: Print event details
+        run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Print runner details
+        run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+
+      - name: Print branch and repository details
+        run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - name: Print repository clone message
+        run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+
+      - name: Print workflow readiness message
+        run: echo "The workflow is now ready to test your code on the runner."
+
+      - name: List files in the repository
+        run: ls ${{ github.workspace }}
+
+      - name: Print job status
+        run: echo "This job's status is ${{ job.status }}."
