@@ -1,3 +1,0 @@
-Hello Hari
-This file is created in other branch named hari-branch1
-  we will create a pull request for this branch to merge it in main branch. and then will see if the workflow triggers on the pull request.
