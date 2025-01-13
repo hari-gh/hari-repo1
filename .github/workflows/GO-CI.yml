@@ -3,8 +3,6 @@ name: Go CI
 on: 
   push:
   workflow_dispatch:
-  
-
 
 jobs:
   build:
@@ -18,6 +16,14 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.18'
+      - name: go mod init <module-name>
+        run: go mod init Hello
+
+      - name: fix dependency
+        run: go mod tidy
+
+      - name: Navigate to project directory
+        run: cd ${{ github.workspace }}
 
       - name: Build
         run: go build -v ./...
