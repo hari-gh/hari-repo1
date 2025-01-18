@@ -19,6 +19,7 @@ jobs:
         run:  |
           python -m pip install --upgrade pip
           pwd
+          cd ./hari-cicd-1
           pip install -r requirements.txt
       - name:  Run Unit Tests
         run:  |
