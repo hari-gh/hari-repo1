@@ -2,7 +2,7 @@ name: Upload File
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "hari1" ]
   workflow_dispatch:
 
 jobs:
