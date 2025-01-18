@@ -3,7 +3,7 @@ name: Go CI
 on: 
   push:
     branches:
-      - main
+      - branch1
   workflow_dispatch:
 
 jobs:
