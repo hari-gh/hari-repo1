@@ -23,6 +23,7 @@ jobs:
           pip install -r requirements.txt
       - name:  Run Unit Tests
         run:  |
+          cd ./hari-cicd-1
           python -m unittest discover -s . -p "test_*.py"
   containerize:
       name: Containerize Application and push images to docker repo
